@@ -17,7 +17,7 @@ class ParametersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create parameter" do
     assert_difference('Parameter.count') do
-      post parameters_url, params: { parameter: { descripcion: @parameter.descripcion, medio: @parameter.medio, nombre: @parameter.nombre, tiempo_respuesta: @parameter.tiempo_respuesta, type_request_id: @parameter.type_request_id } }
+      post parameters_url, params: { parameter: { descripcion: @parameter.descripcion, medio: @parameter.medio, nombre: @parameter.nombre, tiemporespuesta: @parameter.tiemporespuesta } }
     end
 
     assert_redirected_to parameter_url(Parameter.last)
@@ -34,7 +34,7 @@ class ParametersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update parameter" do
-    patch parameter_url(@parameter), params: { parameter: { descripcion: @parameter.descripcion, medio: @parameter.medio, nombre: @parameter.nombre, tiempo_respuesta: @parameter.tiempo_respuesta, type_request_id: @parameter.type_request_id } }
+    patch parameter_url(@parameter), params: { parameter: { descripcion: @parameter.descripcion, medio: @parameter.medio, nombre: @parameter.nombre, tiemporespuesta: @parameter.tiemporespuesta } }
     assert_redirected_to parameter_url(@parameter)
   end
 

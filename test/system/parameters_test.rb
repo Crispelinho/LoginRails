@@ -17,8 +17,7 @@ class ParametersTest < ApplicationSystemTestCase
     fill_in "Descripcion", with: @parameter.descripcion
     fill_in "Medio", with: @parameter.medio
     fill_in "Nombre", with: @parameter.nombre
-    fill_in "Tiempo Respuesta", with: @parameter.tiempo_respuesta
-    fill_in "Type Request", with: @parameter.type_request_id
+    fill_in "Tiemporespuesta", with: @parameter.tiemporespuesta
     click_on "Create Parameter"
 
     assert_text "Parameter was successfully created"
@@ -32,8 +31,7 @@ class ParametersTest < ApplicationSystemTestCase
     fill_in "Descripcion", with: @parameter.descripcion
     fill_in "Medio", with: @parameter.medio
     fill_in "Nombre", with: @parameter.nombre
-    fill_in "Tiempo Respuesta", with: @parameter.tiempo_respuesta
-    fill_in "Type Request", with: @parameter.type_request_id
+    fill_in "Tiemporespuesta", with: @parameter.tiemporespuesta
     click_on "Update Parameter"
 
     assert_text "Parameter was successfully updated"

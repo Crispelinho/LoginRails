@@ -3,11 +3,11 @@
 one:
   nombre: MyString
   descripcion: MyString
-  tiemporespuesta: 2018-05-29 03:47:04
-  medio: MyString
+  file: MyString
+  request: one
 
 two:
   nombre: MyString
   descripcion: MyString
-  tiemporespuesta: 2018-05-29 03:47:04
-  medio: MyString
+  file: MyString
+  request: two

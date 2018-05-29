@@ -1,10 +1,10 @@
-<%= form_with(model: parameter, local: true) do |form| %>
-  <% if parameter.errors.any? %>
+<%= form_with(model: adjunct, local: true) do |form| %>
+  <% if adjunct.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(parameter.errors.count, "error") %> prohibited this parameter from being saved:</h2>
+      <h2><%= pluralize(adjunct.errors.count, "error") %> prohibited this adjunct from being saved:</h2>
 
       <ul>
-      <% parameter.errors.full_messages.each do |message| %>
+      <% adjunct.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -22,13 +22,13 @@
   </div>
 
   <div class="field">
-    <%= form.label :tiemporespuesta %>
-    <%= form.time_select :tiemporespuesta %>
+    <%= form.label :file %>
+    <%= form.text_field :file %>
   </div>
 
   <div class="field">
-    <%= form.label :medio %>
-    <%= form.text_field :medio %>
+    <%= form.label :request_id %>
+    <%= form.text_field :request_id %>
   </div>
 
   <div class="actions">

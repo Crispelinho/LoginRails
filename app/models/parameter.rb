@@ -1,3 +1,3 @@
 class Parameter < ApplicationRecord
-  belongs_to :type_request
+	has_one :type_request
 end
