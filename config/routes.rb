@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :adjuntos
+  resources :usuarios
   resources :requests
   get 'welcome/index'
   devise_for :users

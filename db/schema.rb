@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_28_224254) do
+ActiveRecord::Schema.define(version: 2018_05_29_032520) do
+
+  create_table "adjuntos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "nombre"
+    t.string "descripcion"
+    t.bigint "request_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["request_id"], name: "index_adjuntos_on_request_id"
+  end
 
   create_table "requests", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "descripcion"
@@ -40,5 +49,20 @@ ActiveRecord::Schema.define(version: 2018_05_28_224254) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "usuarios", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "nombre"
+    t.string "apellido"
+    t.integer "telefono"
+    t.string "direccion"
+    t.string "email"
+    t.integer "cedula"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_usuarios_on_user_id"
+  end
+
+  add_foreign_key "adjuntos", "requests"
   add_foreign_key "requests", "users"
+  add_foreign_key "usuarios", "users"
 end
