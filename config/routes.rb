@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :parameters
+  resources :type_requests
   resources :adjuntos
   resources :usuarios
   resources :requests

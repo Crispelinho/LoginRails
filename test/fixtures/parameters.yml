@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  descripcion: MyString
+  tiempo_respuesta: MyString
+  medio: MyString
+  TypeRequest: one
+
+two:
+  nombre: MyString
+  descripcion: MyString
+  tiempo_respuesta: MyString
+  medio: MyString
+  TypeRequest: two
