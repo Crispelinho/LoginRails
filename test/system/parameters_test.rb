@@ -14,11 +14,11 @@ class ParametersTest < ApplicationSystemTestCase
     visit parameters_url
     click_on "New Parameter"
 
-    fill_in "Typerequest", with: @parameter.TypeRequest_id
     fill_in "Descripcion", with: @parameter.descripcion
     fill_in "Medio", with: @parameter.medio
     fill_in "Nombre", with: @parameter.nombre
     fill_in "Tiempo Respuesta", with: @parameter.tiempo_respuesta
+    fill_in "Type Request", with: @parameter.type_request_id
     click_on "Create Parameter"
 
     assert_text "Parameter was successfully created"
@@ -29,11 +29,11 @@ class ParametersTest < ApplicationSystemTestCase
     visit parameters_url
     click_on "Edit", match: :first
 
-    fill_in "Typerequest", with: @parameter.TypeRequest_id
     fill_in "Descripcion", with: @parameter.descripcion
     fill_in "Medio", with: @parameter.medio
     fill_in "Nombre", with: @parameter.nombre
     fill_in "Tiempo Respuesta", with: @parameter.tiempo_respuesta
+    fill_in "Type Request", with: @parameter.type_request_id
     click_on "Update Parameter"
 
     assert_text "Parameter was successfully updated"

@@ -5,11 +5,11 @@ one:
   descripcion: MyString
   tiempo_respuesta: MyString
   medio: MyString
-  TypeRequest: one
+  type_request: one
 
 two:
   nombre: MyString
   descripcion: MyString
   tiempo_respuesta: MyString
   medio: MyString
-  TypeRequest: two
+  type_request: two

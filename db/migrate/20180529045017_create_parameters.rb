@@ -5,7 +5,7 @@ class CreateParameters < ActiveRecord::Migration[5.2]
       t.string :descripcion
       t.string :tiempo_respuesta
       t.string :medio
-      t.references :typerequest, foreign_key: true
+      t.references :type_request, foreign_key: true
 
       t.timestamps
     end
