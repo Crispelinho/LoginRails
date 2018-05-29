@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_29_150036) do
+ActiveRecord::Schema.define(version: 2018_05_29_173003) do
 
   create_table "active_admin_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "namespace"
@@ -104,10 +104,8 @@ ActiveRecord::Schema.define(version: 2018_05_29_150036) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "rol_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-    t.index ["rol_id"], name: "index_users_on_rol_id"
   end
 
   create_table "usuarios", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -128,6 +126,5 @@ ActiveRecord::Schema.define(version: 2018_05_29_150036) do
   add_foreign_key "requests", "users"
   add_foreign_key "rols", "users"
   add_foreign_key "type_requests", "requests"
-  add_foreign_key "users", "rols"
   add_foreign_key "usuarios", "users"
 end

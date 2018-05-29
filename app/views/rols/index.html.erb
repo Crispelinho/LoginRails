@@ -15,7 +15,7 @@
     <% @rols.each do |rol| %>
       <tr>
         <td><%= rol.nombre %></td>
-        <td><%= rol.users %></td>
+        <td><%= rol.user %></td>
         <td><%= link_to 'Show', rol %></td>
         <td><%= link_to 'Edit', edit_rol_path(rol) %></td>
         <td><%= link_to 'Destroy', rol, method: :delete, data: { confirm: 'Are you sure?' } %></td>
